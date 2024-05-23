@@ -107,7 +107,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Best way to reach me is through university <a href="mailto:prodriguez@ugr.es" target="_blank">email</a>. 
+  Best way to reach me is through <a href="mailto:prodriguez@ugr.es" target="_blank">university email</a>. 
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -185,8 +185,8 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  enabled: false
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
