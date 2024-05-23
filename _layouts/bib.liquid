@@ -60,10 +60,10 @@
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | remove: '¶' | remove: '&' | remove: '*' | remove: '†' | remove: '^' -%}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
+        {%- if site.scholar.last_name contains author_last_name -%}
+          {%- if site.scholar.first_name contains author.first -%}
+            {%- assign author_is_self = true -%}
+          {%- endif -%}
         {%- endif -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
@@ -81,10 +81,7 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
-            {{- author.first }}
-            {{ author.last -}}
-          </em>
+          <em>{{- author.first }} {{ author.last -}}</em>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{coauthor_url}}">
@@ -186,11 +183,11 @@
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
-      {% if entry.html %}
-        {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+      {% if entry.url %}
+        {% if entry.url contains '://' %}
+          <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.url | prepend: '/assets/url/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
         {% endif %}
       {% endif %}
       {% if entry.pdf %}
@@ -198,6 +195,13 @@
           <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {% else %}
           <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        {% endif %}
+      {% endif %}
+      {% if entry.preprint %}
+        {% if entry.preprint contains '://' %}
+          <a href="{{ entry.preprint }}" class="btn btn-sm z-depth-0" role="button">PREPRINT</a>
+        {% else %}
+          <a href="{{ entry.preprint | prepend: '/assets/preprint/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PREPRINT</a>
         {% endif %}
       {% endif %}
       {% if entry.supp %}
@@ -220,9 +224,9 @@
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {% endif %}
       {% endif %}
       {% if entry.slides %}
