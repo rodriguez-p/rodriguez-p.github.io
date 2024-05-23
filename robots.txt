@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://rodriguez-p.github.io//sitemap.xml
+Sitemap: http://prodriguez.github.io//prodriguez//sitemap.xml
