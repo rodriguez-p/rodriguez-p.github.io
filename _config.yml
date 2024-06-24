@@ -598,4 +598,4 @@ jsonresume:
 sort_by: date
 order: descending
 type_order: [article, preprint]
-type_names: {preprint: Preprints, article: ,}
+type_names: {preprint: Preprints, article:  ,}
