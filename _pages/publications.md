@@ -9,7 +9,5 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 <div class="publications">
-
-{% bibliography %}
-
+ {% bibliography -f sdaza --group_by type %}
 </div>
