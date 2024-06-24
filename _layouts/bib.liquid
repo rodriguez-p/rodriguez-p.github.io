@@ -157,6 +157,20 @@
     {%- if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
     {%- endif %}
+    {% if entry.preprint %}
+        {% if entry.preprint contains '://' %}
+          <a href="{{ entry.preprint }}" class="btn btn-sm z-depth-0" role="button">PREPRINT</a>
+        {% else %}
+          <a href="{{ entry.preprint | prepend: '/assets/preprint/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PREPRINT</a>
+        {% endif %}
+      {% endif %}
+    {% if entry.url %}
+        {% if entry.url contains '://' %}
+          <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
+        {% else %}
+          <a href="{{ entry.url | prepend: '/assets/url/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
+        {% endif %}
+      {% endif %}
     {%- if entry.bibtex_show %}
       <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
     {%- endif %}
