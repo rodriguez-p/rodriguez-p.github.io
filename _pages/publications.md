@@ -10,7 +10,7 @@ nav_order: 2
 
 <div class="publications">
 
-<h2 class="year">preprints</h2>
+<h2 class="year">submitted papers</h2>
 {% bibliography -f preprints %}
 
 
