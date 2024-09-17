@@ -1,5 +1,5 @@
 - title: Education
-  type: time_table
+  type: time_table 
   contents:
     - title: Ph.D. Psychology
       institution: University of Granada, Granada, Spain
