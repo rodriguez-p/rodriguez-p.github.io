@@ -6,7 +6,7 @@ description:
 nav: true
 nav_order: 3
 ---
-Click on **POSTER** to get a high resolution PDF version of the posters. 
+Click on **POSTER** to get a high resolution PDF file. 
 
 <!-- _pages/presentations.md -->
 <div class="publications">
