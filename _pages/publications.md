@@ -10,9 +10,10 @@ nav_order: 2
 
 <div class="publications">
 
+```
 <h2 class="year">in preparation/submitted papers</h2>
 {% bibliography -f preprints %}
-
+```
 
 {%- for y in page.years %}
   {% bibliography -f papers -q @*[year={{y}}]* %}
