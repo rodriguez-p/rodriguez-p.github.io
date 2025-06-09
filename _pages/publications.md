@@ -14,8 +14,9 @@ nav_order: 2
 <div class="publications">
   <h2 class="bibliography-title">preprints/submitted works</h2>
   <div class="year">
-    <h2 class="year-header" style="display: none;"></h2>
-    {{ preprints }}
+    <div class="year-content">
+      {{ preprints }}
+    </div>
   </div>
 </div>
 {% endif %}
