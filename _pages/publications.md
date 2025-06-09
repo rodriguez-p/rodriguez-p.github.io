@@ -7,7 +7,6 @@ nav_order: 2
 
 ---
 
-
 <!-- Preprints/Submitted Works -->
 {% capture preprints %}{% bibliography -f preprints --group_by none --group_order none %}{% endcapture %}
 {% if preprints != blank %}
