@@ -8,8 +8,17 @@ nav_order: 2
 
 ---
 
+
+<!-- Preprints/Submitted Works -->
+{% capture preprints %}{% bibliography -f preprints %}{% endcapture %}
+{% if preprints != blank %}
 <div class="publications">
+  <h2 class="bibliography-title">Preprints/submitted works</h2>
+  {{ preprints }}
+</div>
+{% endif %}
 
-{% bibliography -f papers %}
-
+<div class="publications">
+  <h2 class="bibliography-title">Peer-reviewed publications</h2>
+  {% bibliography -f papers %}
 </div>
