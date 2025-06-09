@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: publications
-years: [2024,2023]
 nav: true
 nav_order: 2
 
@@ -15,6 +14,7 @@ nav_order: 2
 <div class="publications">
   <h2 class="bibliography-title">preprints/submitted works</h2>
   <div class="year">
+    <h2 class="year-header" style="display: none;"></h2>
     {{ preprints }}
   </div>
 </div>
