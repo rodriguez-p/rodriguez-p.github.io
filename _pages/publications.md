@@ -12,11 +12,8 @@ nav_order: 2
 {% if preprints != blank %}
 <div class="publications">
   <h2 class="bibliography-title">preprints/submitted works</h2>
-  <div class="year">
-    <div class="year-content">
-      {{ preprints }}
-    </div>
-  </div>
+  <h2 class="bibliography"></h2>
+  {{ preprints }}
 </div>
 {% endif %}
 
