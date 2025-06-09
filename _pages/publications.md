@@ -14,10 +14,13 @@ nav_order: 2
 {% if preprints != blank %}
 <div class="publications">
   <h2 class="bibliography-title">preprints/submitted works</h2>
-  {{ preprints }}
+  <div class="year">
+    {{ preprints }}
+  </div>
 </div>
 {% endif %}
 
+<!-- Peer-reviewed papers -->
 <div class="publications">
   <h2 class="bibliography-title">peer-reviewed publications</h2>
   {% bibliography -f papers %}
