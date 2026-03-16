@@ -7,7 +7,7 @@ nav_order: 2
   
 ---
 
-<!-- {% comment %} -->
+<!-- Tip: to hide this section later, wrap it with Liquid tags &#123;% comment %&#125; ... &#123;% endcomment %&#125; -->
 <!-- Preprints/Submitted Works -->
 {% capture preprints %}{% bibliography -f preprints --group_by none --group_order none %}{% endcapture %}
 {% if preprints != blank %}
@@ -17,7 +17,6 @@ nav_order: 2
   {{ preprints }}
 </div>
 {% endif %}
-<!-- {% endcomment %} -->
 
 <!-- Peer-reviewed papers -->
 <div class="publications">
