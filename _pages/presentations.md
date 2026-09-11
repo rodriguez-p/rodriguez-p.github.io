@@ -8,7 +8,7 @@ nav_order: 3
 ---
 Click on **POSTER** or **SLIDES** to get the PDF files. 
 
-* denotes presenting author
+\* denotes presenting author
   
 <!-- _pages/presentations.md -->
 <div class="publications">
